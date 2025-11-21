@@ -58,5 +58,4 @@ const PORT = 1111;
 
 app.listen(PORT, () => {
   console.log(`Server ok! and running on ${PORT}`);
-  importDump();
 });
