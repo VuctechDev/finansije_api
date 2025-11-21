@@ -6,14 +6,16 @@ import { CostItem, PostCostItem } from "../types/costs";
 import { PostPaymentItem, PaymentItem } from "../types/payments";
 require("dotenv/config");
 
-const pool = mySql.createPool({
+export const pool = mySql.createPool({
   connectionLimit: 100,
   host: "188.34.198.128",
   user: "myuser",
   password: "mypass",
   database: "mydatabase",
   port: 3306,
+  multipleStatements: true,
 });
+
 const create_table_reports = `CREATE TABLE reports ( 
   id INT AUTO_INCREMENT PRIMARY KEY, 
   month VARCHAR(30),
