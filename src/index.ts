@@ -53,6 +53,6 @@ const awaw = {
 // db.createNewReport(awaw)
 //
 
-const PORT = 2302
+const PORT = 1111
 
 app.listen(PORT, () => console.log(`Server ok! and running on ${PORT}`))
