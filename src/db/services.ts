@@ -1,4 +1,4 @@
-import mySql from 'mysql'
+import mySql from 'mysql2'
 import { PostReportItem, ReportItem } from '../types/reports'
 import { MainData, Template } from '../types/data'
 import { handleReportData } from '../utils/handleReportData'
@@ -14,7 +14,6 @@ const pool = mySql.createPool({
   database: 'mydatabase',
   port: 3306,
 })
-
 const create_table_reports = `CREATE TABLE reports ( 
   id INT AUTO_INCREMENT PRIMARY KEY, 
   month VARCHAR(30),
