@@ -3,7 +3,7 @@ import path from "path";
 import { pool } from "./services"; // wherever your pool is
 
 export function importDump() {
-  const sqlPath = path.join(process.cwd(), "sql", "dump.sql"); // adjust name/path
+  const sqlPath = path.join(process.cwd(), "backup.sql"); // adjust name/path
   const dump = fs.readFileSync(sqlPath, "utf8");
 
   pool.query(dump, (err) => {
