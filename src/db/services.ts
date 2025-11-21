@@ -9,9 +9,9 @@ require('dotenv/config')
 const pool = mySql.createPool({
   connectionLimit: 100,
   host: '188.34.198.128',
-  user: 'mysql',
-  password: 'xfgWFu8aqrTyumLh04OkEITYqZG4R6W8PoXnqowFTRSd7mlR0KjnQbsqVdT6CBtm',
-  database: 'mysql-database-oksswso4wsgsokwk004w4okc',
+  user: 'myuser',
+  password: 'mypass',
+  database: 'mydatabase',
   port: 3306,
 })
 
