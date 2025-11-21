@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="pets" id="select">
+      <option value="">--Izaberi ucenika--</option>
+    </select>
+  </body>
+
+  <script>
+    const select = document.getElementById('select')
+
+    let names = ['Stefan', 'Nemnja']
+    let data = []
+
+    const getData = async () => {
+      const response = await fetch('http://localhost:3000/welcome')
+      const parsedData = await response.json()
+      console.log(parsedData)
+      names = parsedData.map((item) => item.ucenik_ime)
+      names.forEach((name) => {
+        const option = document.createElement('option')
+        option.value = name
+        option.innerText = name
+        select.appendChild(option)
+      })
+    }
+
+    getData()
+  </script>
+</html>
