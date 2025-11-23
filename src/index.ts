@@ -8,7 +8,6 @@ import reportRoute from "./routes/report";
 import cors from "cors";
 import db from "./db/services";
 import { createCostsFromTemplate } from "./utils/createCostsFromTemplate";
-import { importDump } from "./db/a";
 const app = require("express")();
 
 app.use(json());
